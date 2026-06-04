@@ -88,15 +88,29 @@ WSGI_APPLICATION = 'empmgt.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'empdb',
+#         'USER': 'root',
+#         'PASSWORD': '',        # empty password
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'empdb',
-        'USER': 'root',
-        'PASSWORD': '',        # empty password
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'django-test_emp2',
+        'USER': 'django-test',
+        'PASSWORD': 'modcom2026',        # empty password
+        'HOST': 'mysql-django-test.alwaysdata.net',
+        
+        
+
     }
+
 }
 
 # Password validation

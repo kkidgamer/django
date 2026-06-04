@@ -55,7 +55,7 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
     # NESTED RELATIONSHIP
     # This replaces department ID with full department object
-    department = DepartmentSerializer()
+    department = DepartmentSerializer(read_only=True)
 
     class Meta:
         model = Employee

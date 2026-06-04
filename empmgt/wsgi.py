@@ -8,8 +8,11 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
+# Add your project directory to the sys.path
 from django.core.wsgi import get_wsgi_application
+sys.path.append('/home/django-test/www/empmgt')
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'empmgt.settings')
 

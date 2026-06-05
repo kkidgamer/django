@@ -57,14 +57,23 @@ class EmployeeSerializer(serializers.ModelSerializer):
     # This replaces department ID with full department object
     department = DepartmentSerializer(read_only=True)
 
+    department_id = serializers.PrimaryKeyRelatedField(
+        queryset=Department.objects.all(),
+        source='department',
+        write_only=True
+    )
     class Meta:
         model = Employee
-        fields = '__all__'
-        # Includes:
-        # - first_name
-        # - last_name
-        # - email
-        # - salary
-        # - role
-        # - department (now expanded as object)
-        # - timestamps (date_joined, last_updated)
+        fields = [
+            'id',
+            'first_name',
+            'last_name',
+            'email',
+            'biography',
+            'salary',
+            'role',
+            'department',
+            'department_id',
+            'date_joined',
+            'last_updated'
+        ]
